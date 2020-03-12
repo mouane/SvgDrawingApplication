@@ -1,0 +1,9 @@
+<p>Angle :</p>
+<p>{{angleValue}}</p>
+<mat-slider min="0" max="360" step="1" thumbLabel tickInterval = "1"
+    [(value)]="angleValue" (input)=onAngleChange($event)>
+</mat-slider>
+<p>Taille :</p>
+<mat-slider min="10" max="80" step="1" thumbLabel tickInterval = "1"
+    [(value)]="sliderValue" (input)=onSliderChange($event)>
+</mat-slider>

@@ -1,0 +1,52 @@
+<div>
+  <div *ngIf="toolPropreties.tabsShow" class="tab" #tabs>
+      <button  id="first"  [ngStyle]="{'background': toolPropreties.primary}" (click)="setColorType('primary', $event)"><span id="name">Primaire</span></button>
+      <button class="tablinks" id="second" [ngStyle]="{'background-color': toolPropreties.secondary}" (click)="setColorType('secondary', $event)"><span id="name">Secondaire</span></button>
+      <button class="tablinks"  id="third" [ngStyle]="{'background-color': toolPropreties.background}" (click)="setColorType('background', $event)"><span id="name">De fond</span></button>
+  </div>
+  <div class="summary-info" id = "grid-container" >
+    <div>
+        <div class="circle" (click)="toggleColors()" [ngStyle]="{'background': toolPropreties.colorTrans}"></div>
+  
+        <div id = "opacity">
+          <p>opacité:</p>
+          <input type="text" maxlength="3" (keydown.enter)="transparency(transparencyInput.value)" value={{transLevel}}   #transparencyInput
+            list="transparencyOption" (focus)="onFocus()" (blur)="onBlur()" >
+          <input type="submit" class="okButton" value="Ok" mat-stroked-button (click)="transparency(transparencyInput.value)">
+        </div>
+    </div>
+    <div class="hl"></div>
+    <div  class="swap">
+      <p id = "prim" [ngStyle]="{'color': toolPropreties.primary}"> Primaire </p>
+      <button class="vertIcon" (click)="swapColors()" #swap>
+      <mat-icon  aria-hidden="true" aria-label="Circle icon">swap_vert</mat-icon>
+      </button>
+      <p [ngStyle]="{'color': toolPropreties.secondary}"> Secondaire </p>
+    </div>
+    
+  </div>
+ 
+  <div *ngIf="toolPropreties.show" class="opened">
+    <div class="colors">
+      <div (click)="changeColor(paint, this.typeColor)" *ngFor="let paint of defaultColors " max class="circle" id="#test"
+           [ngStyle]="{'background': paint}"></div>
+    </div>
+    <app-color-palette (outputColor)= "receiveColorPalette($event)"></app-color-palette>
+    <div class="hex-code">
+      <p>HEX CODE</p>
+      <div class="g-input" >
+              <input [ngClass]="{'invalide': invalid}" type="text" maxlength="9" [value]="toolPropreties.colorHEX" 
+              (keydown.enter)="changeColorManual(paintInput.value)" (focus)="onFocus()" (blur)="onBlur()"
+              
+              #paintInput />
+              <div *ngIf="toolPropreties.invalid" class="invalide">Couleur Invalide</div>
+      </div>
+    </div>
+    <div class="hex-code">
+      <p>RGBA</p>
+      <p>{{rgba}}</p>
+    </div>
+    <input type="submit" class="okButton hexButton" value="Ok" mat-stroked-button
+      (click)="changeColorManual(paintInput.value)">
+  </div>
+</div>

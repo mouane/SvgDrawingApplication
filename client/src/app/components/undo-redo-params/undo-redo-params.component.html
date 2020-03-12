@@ -1,0 +1,6 @@
+<button mat-button (click)="undo()" [disabled]="!undoOption">
+        <mat-icon class="toolboxIcon" aria-hidden="true" aria-label="Colorize icon">undo</mat-icon>
+</button>
+<button mat-button (click)="redo()" [disabled]="!redoOption" >
+        <mat-icon class="toolboxIcon" aria-hidden="true" aria-label="Colorize icon">redo</mat-icon>
+</button>

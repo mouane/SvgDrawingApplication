@@ -1,0 +1,11 @@
+<p>Tolerance de couleur (%) :</p>
+<table>
+  <th>
+    <mat-slider thumbLabel min="10" max="100" [(value)]="sliderValueTolerance" (input)=onSliderchangeTolerance($event)>
+    </mat-slider>
+  </th>
+  <th>
+    <p> {{sliderValue}} </p>
+  </th>
+
+</table>

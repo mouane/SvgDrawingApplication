@@ -1,0 +1,30 @@
+.drawingZone{
+    background-color:lightgray;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    padding: 0px;
+    position: absolute;
+}
+
+.grid{
+    height: 0px;
+    width: 0px;
+    padding: 0px;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    
+}
+mat-toolbar-row:active {
+    background-color: gray;
+}
+
+.svg{
+    padding:0px;
+}
+.texture{
+    display: none;
+}

@@ -1,0 +1,146 @@
+<div class="grid-container">
+  <div class="zoneSelect" #tools>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row id="createDrawing" mat-raised-button matTooltip="Creer nouveau dessin" (click)="openDialog()">
+        <mat-icon class="toolboxIcon" aria-hidden="true" aria-label="Build icon">add_box</mat-icon>
+      </mat-toolbar-row>
+
+      <mat-toolbar-row class="pencilSelect brushSelect lineSelect penSelect airBrushSelect" mat-button [matMenuTriggerFor]="afterMenu"
+        matTooltip="Outils de tracé">
+        <mat-icon aria-hidden="true" aria-label="Pencil icon">create</mat-icon>
+      </mat-toolbar-row>
+
+      <mat-menu #afterMenu="matMenu" xPosition="after">
+        <mat-toolbar-row matTooltip="Crayon" (click)="usePencil()">
+          <mat-icon class="toolboxIcon" aria-hidden="true" aria-label="Pencil icon">create</mat-icon>
+        </mat-toolbar-row>
+        <mat-toolbar-row matTooltip="Stylo" (click)="usePen()">
+
+          <svg class="cursor" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001"
+            style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+            <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+            <g>
+              <g>
+                <path style="fill:#010002;" d="M493.48,35.044L464.094,5.665c-7.55-7.548-19.776-7.548-27.322,0l-39.465,39.458l-3.293-3.289
+		c-3.096-3.098-7.306-4.839-11.673-4.839c-4.371,0-8.582,1.742-11.678,4.839L36.792,375.702c-1.806,1.806-3.16,4.001-3.985,6.426
+		L0.86,477.366c-1.999,5.936-0.451,12.5,3.985,16.927c3.142,3.153,7.371,4.839,11.673,4.839c1.76,0,3.533-0.283,5.261-0.856
+		l95.237-31.957c2.419-0.815,4.611-2.179,6.417-3.985l333.852-333.852c6.454-6.452,6.454-16.901,0-23.354l-3.275-3.291l39.47-39.465
+		c3.625-3.628,5.657-8.541,5.657-13.668C499.137,43.582,497.105,38.665,493.48,35.044z M58.439,409.628l31.063,31.079L42.73,456.399
+		L58.439,409.628z M111.452,427.612l-39.916-39.926L382.34,76.872l39.917,39.933L111.452,427.612z" />
+                <path style="fill:#010002;" d="M457.511,165.391l-159.44,159.452c-6.454,6.452-6.454,16.902,0,23.354c3.225,3.225,7.449,4.839,11.673,4.839
+		c4.229,0,8.454-1.615,11.678-4.839l159.445-159.452c6.449-6.452,6.449-16.902,0-23.354
+		C474.413,158.94,463.965,158.94,457.511,165.391z" />
+              </g>
+            </g>
+          </svg>
+
+        </mat-toolbar-row>
+        <mat-toolbar-row matTooltip="Pinceau" (click)="useBrush()">
+          <mat-icon class="toolboxIcon" aria-hidden="true" aria-label="Brush icon">brush</mat-icon>
+        </mat-toolbar-row>
+        <mat-toolbar-row matTooltip="Ligne" (click)="useLine()">
+          <mat-icon id="lineIcon" class="toolboxIcon" aria-hidden="true" aria-label="line_weight icon">line_weight
+          </mat-icon>
+        </mat-toolbar-row>
+        <mat-toolbar-row matTooltip="Aerosol" (click)="useAirBrush()">
+          <img src="../../../assets/imgs/spray-can.png" height="32" width="32"/>
+        </mat-toolbar-row>
+        <mat-toolbar-row matTooltip="Plume" (click)="useQuill()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-feather">
+            <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+            <line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line>
+          </svg>
+        </mat-toolbar-row>
+      </mat-menu>
+
+      <mat-toolbar-row class="colorApplicatorSelect" matTooltip="Applicateur de couleur" (click)="useApplicator()">
+        <mat-icon class="toolboxIcon" aria-hidden="true" aria-label="Color_lens icon">color_lens</mat-icon>
+      </mat-toolbar-row>
+      <mat-toolbar-row class="bucketSelect" matTooltip="Sceau de peinture" (click)="useBucket()">
+        <img src="../../../assets/imgs/bucket.png" height="30" width="30"/>
+      </mat-toolbar-row>
+      <mat-toolbar-row class="pipetteSelect" matTooltip="Pipette" (click)="pipette()">
+        <mat-icon class="toolboxIcon" aria-hidden="true" aria-label="Colorize icon">colorize</mat-icon>
+      </mat-toolbar-row>
+      <mat-toolbar-row class="rectangleSelect" matTooltip="Forme" (click)="drawShape(rectangle, 'calledFromToolBox')">
+        <svg class="geometry" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000"
+          xml:space="preserve">
+          <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+          <g>
+            <g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)">
+              <path
+                d="M4079.8,4149.2c-23-24.9-929.3-1527.1-2011.9-3341.7C751.5-1397.9,100-2507.4,100-2541.9c0-65.1,46-155.2,90.1-176.3c19.2-9.6,532.7-21.1,1143.9-26.8l1107.5-9.6l333.4-574.8c182-316.2,350.6-590.2,373.6-607.4c38.3-32.6,126.5-34.5,1247.4-34.5h1205.2l42.2,42.1c23,24.9,118.8,176.3,212.7,337.2c92,159,174.4,291.3,180.1,291.3c7.7,0,65.2-44.1,128.4-99.6c693.6-595.9,1672.8-739.6,2452.6-360.2c245.3,118.8,389,224.2,605.5,438.8c350.7,348.7,557.6,731.9,651.5,1199.5c34.5,172.5,34.5,613.2,0,785.6C9786-894,9581-503.1,9264.8-175.4c-260.6,270.2-511.6,438.8-822,551.9L8291.4,432l-9.6,484.8c-9.6,511.6-13.4,534.6-103.5,594c-32.6,21.1-241.4,28.7-1130.5,36.4l-1090.3,9.6l-797.1,1287.6c-438.8,709-814.3,1301-835.4,1316.4C4265.6,4206.7,4129.6,4199.1,4079.8,4149.2z M4850.1,2568.4l626.6-1011.7l-469.4-9.6c-331.5-7.7-484.8-17.2-513.5-34.5c-95.8-53.7-101.5-97.7-101.5-664.9V320.8h-578.7c-536.5,0-584.4-3.8-640-36.4c-59.4-36.4-84.3-76.6-1002.1-1659.4c-203.1-350.7-233.8-412-226.1-469.5c5.8-36.4,65.2-164.8,134.1-281.7l124.6-216.5h-766.5c-450.3,0-762.6,7.7-758.8,17.2c17.2,46,3531.4,5918.9,3539.1,5913.1C4221.6,3584,4507.1,3124.1,4850.1,2568.4z M7860.3,819V512.4H7684c-599.7,0-1186.1-239.5-1617.2-661.1l-103.5-101.5L5856-66.2c-170.5,295.1-197.4,331.5-266.3,360.2c-49.8,19.2-159,26.8-431.1,26.8h-364.1v402.4v402.4h1532.9h1532.9V819z M7979.1,83.2c712.8-136,1266.6-632.3,1450.5-1295.3c182-653.4,5.7-1352.8-452.2-1806.9c-174.4-172.4-285.5-249.1-513.5-360.2c-254.8-120.7-461.8-174.4-737.7-185.9c-364.1-13.4-670.6,57.5-963.8,224.2c-143.7,82.4-377.5,274-461.8,377.5l-47.9,57.5l295.1,507.8c201.2,344.9,297,525,297,563.3c0,40.2-99.6,229.9-325.7,620.8c-180.1,308.5-325.7,569.1-325.7,576.8c0,36.4,191.6,241.4,320,344.9C6748.9-102.6,6998,18.1,7277.8,79.4C7448.3,115.8,7799,117.7,7979.1,83.2z M5896.3-955.3c272.1-471.4,494.4-866.1,494.4-877.6c0-11.5-222.3-408.1-496.3-877.6l-496.3-858.4h-1006H3384.2l-502,869.9l-502,869.9l502,864.2l502,864.2H4394h1007.9L5896.3-955.3z" />
+            </g>
+          </g>
+        </svg>
+      </mat-toolbar-row>
+      <mat-toolbar-row class="gridSelect" matTooltip="Configuration de la grille" (click)="chooseBackground()">
+        <mat-icon class="toolboxIcon" aria-hidden="true" aria-label="format-color-fill icon">grid_on</mat-icon>
+      </mat-toolbar-row>
+      <mat-toolbar-row class="stampSelect" matTooltip="Etampes" (click)="useStamp()">
+        <mat-icon class="toolboxIcon" aria-hidden="true" aria-label="collection icon">collections</mat-icon>
+      </mat-toolbar-row>
+      <mat-toolbar-row class="eraser" matTooltip="Eraser" (click)="useEraser()">
+        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+          <path class="icon"
+            d="M5.662 23l-5.369-5.365c-.195-.195-.293-.45-.293-.707 0-.256.098-.512.293-.707l14.929-14.928c.195-.194.451-.293.707-.293.255 0 .512.099.707.293l7.071 7.073c.196.195.293.451.293.708 0 .256-.097.511-.293.707l-11.216 11.219h5.514v2h-12.343zm3.657-2l-5.486-5.486-1.419 1.414 4.076 4.072h2.829zm6.605-17.581l-10.677 10.68 5.658 5.659 10.676-10.682-5.657-5.657z" />
+        </svg>
+      </mat-toolbar-row>
+      <mat-toolbar-row class="textSelect" matTooltip="Text" (click)="useText()">
+        <mat-icon class="toolboxIcon" aria-hidden="true" aria-label="text icon">Title</mat-icon>
+      </mat-toolbar-row>
+      <mat-toolbar-row class="selectSelect" matTooltip="Outil de sélection" (click)="selectObjects()">
+        <svg class="cursor" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001"
+          style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+          <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+          <g>
+            <g>
+              <path
+                d="M429.742,319.31L82.49,0l-0.231,471.744l105.375-100.826l61.89,141.083l96.559-42.358l-61.89-141.083L429.742,319.31z
+                M306.563,454.222l-41.62,18.259l-67.066-152.879l-85.589,81.894l0.164-333.193l245.264,225.529l-118.219,7.512L306.563,454.222z" />
+            </g>
+          </g>
+        </svg>
+      </mat-toolbar-row>
+      <mat-toolbar-row class="save" matTooltip="Sauvegarder" [matMenuTriggerFor]="saveOption">
+        <mat-icon class="toolboxIcon" aria-hidden="true" aria-label="save icon">save</mat-icon>
+      </mat-toolbar-row>
+      <mat-menu #saveOption="matMenu" xPosition="after">
+        <mat-toolbar-row matTooltip="sauvegarde serveur" (click)="openSaveDialog()">
+          <mat-icon class="toolboxIcon" aria-hidden="true" aria-label="cloud_download icon">cloud_download</mat-icon>
+        </mat-toolbar-row>
+        <mat-toolbar-row matTooltip="sauvegarde local" (click)="openLocalSave()">
+          <mat-icon class="toolboxIcon" aria-hidden="true" aria-label="save_alt icon">save_alt</mat-icon>
+        </mat-toolbar-row>
+      </mat-menu>
+      <mat-toolbar-row class="download" matTooltip="Ouvrir un dessin" [matMenuTriggerFor]="openOption">
+        <mat-icon class="toolboxIcon" aria-hidden="true" aria-label="cloud_download icon">cloud_download</mat-icon>
+      </mat-toolbar-row>
+      <mat-menu #openOption="matMenu" xPosition="after">
+        <mat-toolbar-row matTooltip="ouvrir du serveur" (click)="openDrawingDialog()">
+          <mat-icon class="toolboxIcon" aria-hidden="true" aria-label="cloud_upload icon">cloud_upload</mat-icon>
+        </mat-toolbar-row>
+        <mat-toolbar-row matTooltip="ouvrir local" (click)="openLocalUpload()">
+          <mat-icon class="toolboxIcon" aria-hidden="true" aria-label="folder_open icon">folder_open</mat-icon>
+        </mat-toolbar-row>
+      </mat-menu>
+      <mat-toolbar-row matTooltip="Exporter Dessin" (click)="openExportDrawingDialog()">
+        <mat-icon class="toolboxIcon" aria-hidden="true" aria-label="save_alt icon">file_download</mat-icon>
+      </mat-toolbar-row>
+      <mat-toolbar-row class="userGuide" matTooltip="Guide d'utilisaton" (click)="openUserGuide()">
+        <mat-icon class="toolboxIcon" aria-hidden="true" aria-label="description icon">description</mat-icon>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </div>
+
+  <div class="zoneTools" #params>
+    <div class="keep">
+      <app-undo-redo-params class="keep"></app-undo-redo-params>
+      <div class="keep" style="margin-top: 10px;"></div>
+      <app-color-picker class="keep"></app-color-picker>
+    </div>
+  </div>
+</div>

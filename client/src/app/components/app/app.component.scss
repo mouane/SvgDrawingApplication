@@ -1,0 +1,11 @@
+ .drawingBoard{
+     background-color:lightgrey;
+     border: solid;
+ }
+ .mainScreen {
+     display: grid;
+     height: 100% ; 
+     grid-template-columns: 320px 1fr ;
+     background-color: lightgrey;
+   }
+  

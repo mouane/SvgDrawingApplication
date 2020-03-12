@@ -1,0 +1,12 @@
+.export {
+    min-width: 300px;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 6px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    text-align: center;
+  }

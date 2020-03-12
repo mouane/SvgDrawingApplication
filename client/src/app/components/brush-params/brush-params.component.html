@@ -1,0 +1,15 @@
+<p>Taille :</p>
+<mat-slider min="2" max="40" [(value)]="sliderValue" (input)=onSliderchange($event)>
+</mat-slider>
+<svg height="50" width="50">
+  <circle cx="25" cy="25" [attr.r]="sliderValue" [attr.fill]="fill" />
+</svg>
+<div class="padding-left">
+  <mat-button-toggle-group vertical>
+    <mat-button-toggle checked="true" mat-raised-button color="primary" (click)="setTextureBase()">Base</mat-button-toggle>
+    <mat-button-toggle mat-raised-button color="primary" (click)="setTextureTurbulence()">Turbulence</mat-button-toggle>
+    <mat-button-toggle mat-raised-button color="primary" (click)="setTextureNoise()">Bruit</mat-button-toggle>
+    <mat-button-toggle mat-raised-button color="primary" (click)="setTextureBlurry()">Trouble</mat-button-toggle>
+    <mat-button-toggle mat-raised-button color="primary" (click)="setTextureSquigly()">Zig-Zag</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>

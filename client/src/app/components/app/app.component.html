@@ -1,0 +1,9 @@
+<div class="mainScreen" (wheel)="mouseWheel($event)">
+  <div class="toolBox">
+    <app-tool-box></app-tool-box>
+  </div>
+  <div #drawingView class = "drawingBoard" oncontextmenu="return false;">
+    <app-welcome-window (WelcomeEvent) = "changeCanvasState($event)"></app-welcome-window>
+    <app-drawingView *ngIf="!showCanvas"></app-drawingView>
+  </div>
+</div>

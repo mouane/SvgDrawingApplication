@@ -1,0 +1,15 @@
+<form class=save>
+    <h2 class="mat-h2">Sauvegarder le dessin local</h2>
+
+  <div>
+    <mat-form-field class="dessin">
+      <input matInput placeholder="Nom du Dessin" [formControl]="nameControl" required #nom>
+      <mat-error *ngIf="nameControl.invalid">{{getErrorMessageName()}}</mat-error>
+    </mat-form-field>
+  </div>
+  <div class="grid-container">
+    <button mat-button="" [mat-dialog-close]="true" tabindex="-1" class="close"(click)="dialogClose()"> Fermer </button>
+    <button (click)="formatFile(nom.value)" class="download" mat-button="" type="submit"[disabled]="nameControl.invalid"> Télécharger </button>
+  </div>
+</form>
+<div #save></div>

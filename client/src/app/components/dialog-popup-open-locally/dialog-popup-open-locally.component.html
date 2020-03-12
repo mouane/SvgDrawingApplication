@@ -1,0 +1,10 @@
+<div class="open">
+  <div>
+    <h2 class="mat-h2">Ouvrir un dessin</h2>
+  </div>
+  <input type='file' (change)="readUrl($event)" id="input">
+  <div class="grid-container">
+    <button mat-button="" class="close" [mat-dialog-close]="true" tabindex="-1" (click)='dialogClose()'>Fermer</button>
+    <button mat-button="" class="openDrawing" type="submit" (click)="loadDrawing()" [disabled]="!properties.fileChosen"> Ouvrir Dessin </button>
+  </div>
+</div>

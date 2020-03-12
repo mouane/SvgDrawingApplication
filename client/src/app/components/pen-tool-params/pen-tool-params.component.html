@@ -1,0 +1,16 @@
+<p>Taille Max :</p>
+<mat-slider min="20" max="40"
+  [(value)]="sliderMax"
+  (input)=sliderTipMax($event)>
+</mat-slider>
+<svg height="50" width="50">
+  <circle cx="25" cy="25" [attr.r]="sliderMax" [attr.fill]="fill" />
+</svg>
+<p>Taille Min :</p>
+<mat-slider min="5" max="19"
+  [(value)]="sliderMin"
+  (input)=sliderTipMin($event)>
+</mat-slider>
+<svg height="50" width="50">
+  <circle cx="25" cy="25" [attr.r]="sliderMin" [attr.fill]="fill" />
+</svg>

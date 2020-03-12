@@ -1,0 +1,45 @@
+<div>
+    <p>Cliquez sur l'image pour la sélectionner</p>
+    <div class = "stampDiv">
+      <div >
+        <p>Mise à l'échelle</p>
+        <p><span class="f"><div class="n">{{nominator}}</div><div class="d">{{denominator}}</div></span></p>
+      </div>
+      <div> 
+        <button class= "smallButton" mat-raised-button (click)="incrementScalingFactor()">+</button>
+        <button class= "smallButton" mat-raised-button (click)="decrementScalingFactor()">-</button>
+      </div>
+      <div>
+        <p>Angle de rotation</p>
+        <p>{{rotationFactor}}</p>
+      </div> 
+      <div>
+          <button class= "smallButton" mat-raised-button (click)="incrementRotationFactor()">+</button>
+          <button class= "smallButton" mat-raised-button (click)="decrementRotationFactor()">-</button>
+      </div>
+      <div class="stamp">
+        <img src= '../../../../assets/imgs/mich1.png' height=60 width=60 (click)="imageClicked('mich1')">
+      </div>
+      <div class="stamp">
+        <img src= '../../../../assets/imgs/mich2.png' height=60 width=60 (click)="imageClicked('mich2')">
+      </div>
+      <div class="stamp">
+        <img src= '../../../../assets/imgs/mich3.png' height=60 width=60 (click)="imageClicked('mich3')">
+      </div>  
+      <div class="stamp">
+        <img src= '../../../../assets/imgs/mich4.png' height=60 width=60 (click)="imageClicked('mich4')">
+      </div>
+      <div class="stamp">
+        <img src= '../../../../assets/imgs/mich5.png' height=60 width=60 (click)="imageClicked('mich5')">
+      </div>
+      <div class="stamp">
+        <img src= '../../../../assets/imgs/dwight1.png' height=60 width=60 (click)="imageClicked('dwight1')">
+      </div> 
+      <div class="stamp">
+          <img src= '../../../../assets/imgs/dwight2.png' height=60 width=60 (click)="imageClicked('dwight2')">
+      </div> 
+      <div class="stamp">
+          <img src= '../../../../assets/imgs/dwight3.png' height=60 width=60 (click)="imageClicked('dwight3')">
+      </div>
+    </div>
+</div>

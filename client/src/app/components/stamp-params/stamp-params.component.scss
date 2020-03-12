@@ -1,0 +1,102 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 70px auto;
+    background-color: #F3F3F3;
+    padding: 0px;
+    height: 100%;
+  }
+.stampSelected{
+  border: solid #1d33ad;
+  border-radius: 3px;
+  
+} 
+  button {
+    display: block;
+    margin-top: 5px;
+    width: 120px;
+    text-align: justify;
+  }
+  
+  .changeSides{
+    width: 40px;
+    text-align: center;
+  }
+  
+  .numberOfSides{
+    margin-bottom: 0px;
+  }
+  
+  .mat-toolbar-row {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+  }
+  
+  .mat-form-field {
+    margin-left: 10px;
+    width: 150px;
+  }
+  
+  .mat-toolbar-row:hover {
+    background-color: grey;
+  }
+  
+  .option{
+    background-color : gray;
+  }
+  
+  mat-icon{
+    vertical-align: middle;
+  }
+  .smallButton{
+    display:block;
+    width: 3%;
+    text-align: start;
+    min-width: 1%;
+  }
+  .color{
+    -webkit-background-clip: text;
+    background-clip: box;
+    font-weight: bolder;
+    margin: 20px;
+  }
+  .confirm{
+    background-color: #ff4081;
+    color: white;
+    margin: auto;
+    
+  }
+  
+  
+  p{
+    color: #1d33ad;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  
+ 
+  
+ 
+  
+  
+  
+  .stampDiv {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding:15px;
+    padding-left: 25px;
+  }
+ 
+  .f {
+    display: inline-block;
+    width: 1em;
+  }
+  .n {
+    text-align: center;
+    border-bottom: 1px solid black; 
+  }
+  
+  .d {
+    text-align: center;
+  }
+  

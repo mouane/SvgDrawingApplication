@@ -1,0 +1,40 @@
+<p>Taille :</p>
+<mat-slider min="2" max="20" [(value)]="sliderValue" (input)=onSliderChange($event)>
+</mat-slider>
+<svg height="50" width="50">
+    <circle cx="25" cy="25" [attr.r]="sliderValue" [attr.fill]="fill" />
+</svg>
+
+<div class="lineToolType">
+
+    <mat-button-toggle-group vertical>
+
+        <mat-button-toggle checked="true" mat-raised-button color="primary" (click)="setContinuedLine()">Continue</mat-button-toggle>
+        <mat-button-toggle mat-raised-button color="primary" (click)="setDottedLine()">Pointillé</mat-button-toggle>
+        <mat-button-toggle mat-raised-button color="primary" (click)="setDashedLine()">Trait</mat-button-toggle>
+    </mat-button-toggle-group>
+    
+</div>
+
+<div class="lineToolType">
+    <br/>
+    <br/>
+    <br/>
+    <mat-button-toggle-group vertical>
+
+        <mat-button-toggle checked="true" mat-raised-button color="primary" (click)="setRoundJunction()">Arrondi</mat-button-toggle>
+        <mat-button-toggle mat-raised-button color="primary" (click)="setAngledJunction()">En Angle</mat-button-toggle>
+        <mat-button-toggle mat-raised-button color="primary" (click)="setDottedJunction()">Avec Point
+        </mat-button-toggle>
+        <br/>
+        <br/>
+        <br/>
+    </mat-button-toggle-group>
+    
+    <p>Grosseur du point :</p>
+    <mat-slider min="2" max="40" [(value)]="lineSliderValue" (input)=lineSliderChange($event)>
+    </mat-slider>
+    <svg height="50" width="50">
+        <circle cx="25" cy="25" [attr.r]="lineSliderValue" [attr.fill]="fill" />
+    </svg>
+</div>

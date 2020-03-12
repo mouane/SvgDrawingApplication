@@ -1,0 +1,22 @@
+<div class="pipetteElements">
+    <p class="pipette">Couleur selectionnée par pipette</p>
+    <table>
+      <tr>
+        <th>
+          <p class="selection"> couleur primaire: </p>
+        </th>
+        <th>
+          <div class="pipetteColor" [style.background] = getFill()></div>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <p class="selection"> couleur secondaire: </p>
+        </th>
+        <th>
+          <div class="pipetteColor" [style.background] = getOutline()></div>
+        </th>
+      </tr>
+    </table>
+    <button (click)="setPipetteColor()" class="applyColors">Appliquer</button>
+  </div>

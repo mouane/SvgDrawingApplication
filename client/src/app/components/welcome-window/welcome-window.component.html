@@ -1,0 +1,24 @@
+<div *ngIf="shouldNotOpen" id="welcomePadding">
+    <div class = "welcomeMessage">
+        <div id="title">PolyDessin</div>
+            <div class = "innerWrapper">
+                <div class = "innerText">
+                    Bienvenue sur PolyDessin. Ce logiciel vous permet de créer des chef d'oeuvres et de les enregistrer sur notre serveur. 
+                </div>
+                <div class = "innerText">
+                    Sur le coté gauche se trouve la zone des outils de dessin. Il vous est possible de selectionner de multiples outils pour ensuite créer un dessin dans le zone de production a droite.
+                </div>
+                <div class = "innerText">
+                    Pour plus d'informations, veuillez visiter le guide d'utilisation, qui est accessible par le bouton à gauche en bas de page. 
+                </div>
+                <div id= "buttonPadding">
+                    <button (click)="welcomeWindowCloseFunction()">Fermer</button>
+                    <label class="container">
+                        <input id ="checkboxid" type="checkbox" (click)="checkBoxClick()">
+                        <span class="checkmark"></span>Ne plus afficher
+                    </label>
+                </div>           
+            </div>
+    </div>
+</div>
+

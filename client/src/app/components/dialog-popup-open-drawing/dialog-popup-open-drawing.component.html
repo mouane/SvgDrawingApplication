@@ -1,0 +1,43 @@
+<div class="open">
+  <div>
+    <h2 class="mat-h2">Ouvrir un dessin</h2>
+  </div>
+  <div class="loadingImg" *ngIf="properties.loading">
+    <img src='../../../../assets/imgs/loading.gif' height="400px" length="400px" />
+  </div>
+  <div #noDrawings ></div>
+  <div class = "grid-container">
+      <button mat-button="" *ngFor="let child of properties.drawingsList; let i = index"
+        style='border:1px solid black; margin:1px; height: 200px;' (click)="loadDrawingCaller(child)"
+        [ngClass]="properties.theSelectedDrawing === child ? 'drawingChosen' : 'drawing'">
+          <p matLine class="tags">Nom du dessin:</p>
+          <h2 matLine class="name">{{child.name}}</h2>
+          <p matLine class="tags">Étiquette(s):</p>
+          <p class="tagNames">{{child.tags}}</p>
+          <p matLine class="tags">Date de création:</p>
+          <p class="tagNames">{{child.createdAt | date: 'dd/MM/yyyy' }}</p>
+          <img class="imageBorder" [attr.src]="properties.drawing[i]" width="50" height="50">
+      </button>
+  </div>
+  <div *ngIf="!properties.loading">
+    <div><input type="checkbox" name='filter' [(ngModel)]="properties.tag" [value]="true" [checked]="properties.tag">
+      Filtrer par etiquette</div>
+    <mat-form-field *ngIf="properties.tag">
+      <mat-label>Choisir les etiquette</mat-label>
+      <mat-select [(ngModel)]="properties.selectedTags" (ngModelChange)="onNgModelChange($event)" multiple>
+        <mat-option *ngFor="let tags of properties.tagsList" [value]="tags"> {{tags}} </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="openClose-container">
+      <button mat-button="" [mat-dialog-close]="true" tabindex="-1" class="close"(click)=dialogClose()> Fermer </button>
+      <button mat-button="" type="submit" (click)="loadDrawing()" [disabled]="properties.theSelectedDrawing.name === undefined" class="openDrawing"> Ouvrir Dessin
+      </button>
+      <button mat-button="" type="submit" (click)="deleteDrawing()" tabindex="-1" class="close"> Supprimer dessin </button>
+
+    </div>
+  </div>
+</div>
+    
+    
+    
+    

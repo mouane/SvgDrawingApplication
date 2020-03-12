@@ -1,0 +1,58 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 70px auto;
+    background-color: #F3F3F3;
+    padding: 0px;
+    height: 100%;
+  }
+  
+  button {
+    display: block;
+    margin-top: 5px;
+    width: 120px;
+    text-align: justify;
+  }
+  
+  .mat-toolbar-row {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+  }
+  
+  .mat-form-field {
+    margin-left: 10px;
+    width: 150px;
+  }
+  
+  .mat-toolbar-row:hover {
+    background-color: grey;
+  }
+  
+  .option{
+    background-color : gray;
+  }
+  
+  mat-icon{
+    vertical-align: middle;
+  }
+  .color{
+    -webkit-background-clip: text;
+    background-clip: box;
+    font-weight: bolder;
+    margin: 20px;
+  }
+  .confirm{
+    background-color: #ff4081;
+    color: white;
+    margin: auto;
+    
+  }
+  
+  
+  p{
+    color: #1d33ad;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  
+  

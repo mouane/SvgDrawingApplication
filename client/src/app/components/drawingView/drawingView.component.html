@@ -1,0 +1,7 @@
+<div class = "container" #container>
+    <div  class = "drawingZone" [style.cursor]="eraserEnabled()" #mainDiv (scroll) = "amountScrolled($event)">
+    </div>
+</div>
+<app-filter-texture class = "texture"></app-filter-texture>
+
+

@@ -1,0 +1,6 @@
+<p>Taille :</p>
+<mat-slider min="2" max="40" [(value)]="sliderValue" (input)=onSliderchange($event)>
+</mat-slider>
+<svg height="50" width="50">
+    <circle cx="25" cy="25" [attr.r]="sliderValue" [attr.fill]="fill" />
+</svg>

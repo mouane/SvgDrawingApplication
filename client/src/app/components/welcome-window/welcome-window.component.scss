@@ -1,0 +1,70 @@
+.welcomeMessage{
+    background-color: #333333;
+    border-style: ridge;
+    border-color:grey;
+    }
+    #welcomePadding{
+        padding: 10% 15% 0% 15%;
+        position: absolute;
+        z-index: 55;
+    }
+    
+    button{
+        color: white; 
+        background-color:rgb(231, 156, 156);
+        font-family: 'Arial', sans-serif; 
+        font-weight: bold;
+        font-size: 16px;
+        padding: 5px 8px; 
+        border-radius: 4px;
+        display: inline-block;
+        opacity: 1;
+        
+    }
+    button:hover {opacity: 0.8;}
+    .container {
+        display: inline-block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 16px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: lightgray;
+      }
+    
+    .innerWrapper{
+        text-align: center;
+    }
+    #buttonPadding{
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+    .innerText{ 
+        color:white;
+        font-family: 'Muli', sans-serif; 
+        margin-bottom: 10px; 
+        text-align: left;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    
+    h1 {
+        padding-bottom: 15px;
+        padding-top: 10px;
+        text-align: center;
+        }
+    #title {
+     
+        color: #FFFFFF;
+        background: #333333;
+        text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+        color: #FFFFFF;
+        background: #333333;
+        font-size: 100px;
+        text-align: center;
+        padding: 3% 0% 3% 0%;
+        }

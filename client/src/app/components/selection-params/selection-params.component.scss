@@ -1,0 +1,221 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$app-primary: mat-palette($mat-indigo);
+$app-accent:  mat-palette($mat-pink, A200, A100, A400);
+
+$app-theme: mat-light-theme($app-primary, $app-accent);
+
+@mixin mix-app-theme($app-theme) {
+  $primary: map-get($app-theme, primary);
+  $accent: map-get($app-theme, accent);
+  $warn: map-get($app-theme, warn);
+
+  .mat-button-toggle {
+    margin: 3px;
+    border-radius: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: mat-color($primary);
+    color: mat-color($primary, default-contrast);
+  }
+  .mat-button-toggle-checked {
+    background-color: mat-color($accent);
+    color: mat-color($accent, default-contrast);
+  }
+  .mat-button-toggle-disabled{
+    background-color: #CCCCCC;
+    pointer-events: none;
+  }
+  .mat-button-toggle-checked-disabled {
+    background-color: #CCCCCC;
+  }
+ 
+  .mat-button-toggle-group {
+    border: none;
+    float: left;
+    width: auto;
+    margin-left: 15px;
+  }
+}
+
+@include mix-app-theme($app-theme);
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 70px auto;
+    background-color: #F3F3F3;
+    padding: 0px;
+    height: 100%;
+  }
+  
+  .cursor{ 
+    height: 27px; 
+    width: 27px; 
+    fill: white; 
+    margin-left: 5px; 
+  } 
+  .toolboxIcon {
+    padding: 5px;
+    
+  }
+  .vertIcon{
+    padding: 5px;
+    display: contents;
+  }
+ 
+  .changeSides{
+    width: 40px;
+    text-align: center;
+  }
+  .lineToolType{
+    float: left;
+    clear: both;
+  }
+  
+  .numberOfSides{
+    margin-bottom: 0px;
+  }
+  
+  .mat-toolbar-row {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+  }
+  
+  .mat-form-field {
+    margin-left: 10px;
+    width: 150px;
+  }
+  
+  .mat-toolbar-row:hover {
+    background-color: grey;
+  }
+  
+  .option{
+    background-color : gray;
+  }
+  
+  mat-icon{
+    vertical-align: middle;
+  }
+  .smallButton{
+    display:block;
+    width: 3%;
+    text-align: start;
+    min-width: 1%;
+  }
+  
+  #create {
+    font-size: 24px;
+  }
+  
+  .zoneTools{
+    background-color: #F3F3F3;
+    height: 100vh;
+    overflow: auto;
+  }
+  .zoneSelect{
+    background-color: #1d33ad;
+  }
+  .padding-left{
+    padding-left: 15px;
+  }
+  
+  .geometry {
+    height: 36px;
+    width: 36px;
+    fill: white;
+  }
+  
+  .color{
+    color: #1d33ad;
+    -webkit-background-clip: text;
+    background-clip: box;
+    font-weight: bolder;
+    margin: 20px;
+  }
+  .confirm{
+    background-color: #ff4081;
+    color: white;
+    margin: auto;
+    
+  }
+  
+  mat-slider{
+    margin-left: 10px;
+  }
+  
+  input{
+    width:30px;
+    padding-left: 10px;
+    margin-top:10px;
+  }
+  
+  .swap{
+    width: 40px;
+    margin-top: 10px;
+    background-color: white;
+    margin-left: 112px;
+    border-radius: 5px;
+  }
+  
+  .swap:hover{
+    background-color: #3f51b5;
+  }
+  .circle {
+    opacity: 20%;
+  }
+  .circle:hover {
+    opacity: 50%;
+  }
+  .circle:active {
+    opacity: 100%;
+  }
+  input:checked + g{
+    opacity: 100%;
+
+  }
+  .stampDiv {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding:15px;
+    padding-left: 25px;
+  }
+  .insideGrid{
+    display: grid;
+    grid-auto-columns: auto auto;
+  }
+  .f {
+    display: inline-block;
+    width: 1em;
+  }
+  .n {
+    text-align: center;
+    border-bottom: 1px solid black; 
+  }
+  
+  .d {
+    text-align: center;
+  }
+  
+  
+  .pipetteColor{
+    border: 1px solid black;
+    margin-left: 50%;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .pipette {
+    margin-top: 20px;
+  }
+  
+  .selection {
+    font-size: 14px;
+  }
+  #lineIcon{
+    font-size: 30px;
+    text-align: left;
+  }

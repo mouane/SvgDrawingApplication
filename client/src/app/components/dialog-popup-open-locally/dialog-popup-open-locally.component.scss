@@ -1,0 +1,24 @@
+.open {
+  min-width: 300px;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.openDrawing {
+  background-color: #3f51b5;
+  border-collapse: collapse;
+  margin: 5px;
+}
+
+.close {
+  background-color: #b5b3ac;
+  margin: 5px;
+}

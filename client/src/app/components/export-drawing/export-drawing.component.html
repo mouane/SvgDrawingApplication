@@ -1,0 +1,20 @@
+<form class = "export">
+
+<h2 class="mat-h2">Exporter le dessin</h2>
+<mat-form-field>
+
+<mat-label>Veuillez sélectionner le format</mat-label>
+        <mat-select placeholder="Format" [(ngModel)]="selected" name="food" (change)="export($event.value)">
+                <mat-option *ngFor="let imageType of imageTypes" [value]="imageType.value">
+                {{imageType.viewValue}}
+                </mat-option>
+        </mat-select>
+</mat-form-field>
+<br/>
+
+<div class = "grid-container">
+    <button mat-button="" [mat-dialog-close]="true" tabindex="-1" style="margin:5px" (click)="dialogClose()"> Fermer </button>
+    <button mat-button="" tabindex="-1" style="margin:5px" (click)="export($event.value)" >Exporter</button>
+</div>
+
+</form>

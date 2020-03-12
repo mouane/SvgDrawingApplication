@@ -1,0 +1,7 @@
+<p>Taille efface :</p> 
+<p>{{sliderValue}} px</p>
+<mat-slider min="25" max="150" [(value)]="sliderValue" (input)=onSliderChange($event)>
+</mat-slider>
+<svg height="50" width="50">
+    <rect cx="30" cy="25" [attr.width]="sliderValue"  [attr.height]="sliderValue" [attr.fill]="fill" />
+</svg>

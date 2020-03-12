@@ -1,0 +1,69 @@
+<div class = "mainDiv">
+  <h2 mat-dialog-title > Creer un nouveau dessin</h2>
+  <div>
+    <div >
+        <mat-form-field >
+            <input matInput [(ngModel)]="data.length" placeholder="Longueur "[formControl]="minMaxL" required>
+            <mat-error *ngIf="minMaxL.invalid">{{getErrorMessage()}}</mat-error>
+            <span matSuffix>px</span>
+          </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field >
+            <input matInput [(ngModel)]="data.height" placeholder="Hauteur "[formControl]="minMaxH" required>
+            <mat-error *ngIf="minMaxH.invalid">{{getErrorMessage()}}</mat-error>
+            <span matSuffix>px</span>
+        </mat-form-field>
+    </div>
+  </div>
+    <input name="options" [(ngModel)]="dialogPopup.options" type="radio" [value]="true" [checked]="dialogPopup.options" /> Hexa
+
+    <input name="options" [(ngModel)]="dialogPopup.options" type="radio" [value]="false" [checked]="!dialogPopup.options" /> RGBA
+
+    <h2 *ngIf="dialogPopup.options">
+      <app-color-picker (outputColor)=setBackground($event)></app-color-picker>
+    </h2>
+    <h2 *ngIf="!dialogPopup.options">
+      <div>
+        <form>
+          <div class="form-group">
+            <label for="red" class="red">Red</label>
+            <input type="text" class="form-control" [(ngModel)]="red" [formControl]="redColor"  required>
+            <mat-error *ngIf="redColor.invalid">{{getErrorMessageRgba()}}</mat-error>
+          </div>
+
+          <div class="form-group">
+            <label for="green" class="green">Green</label>
+            <input type="text" class="form-control" [(ngModel)]="green"  [formControl]="greenColor" required>
+            <mat-error *ngIf="greenColor.invalid">{{getErrorMessageRgba()}}</mat-error>
+          </div>
+
+          <div class="form-group">
+            <label for="blue" class="blue">Blue</label>
+            <input type="text" class="form-control" [(ngModel)]="blue" [formControl]="blueColor" required>
+            <mat-error *ngIf="blueColor.invalid">{{getErrorMessageRgba()}}</mat-error>
+          </div>
+
+          <div class="form-group">
+            <label for="alpha">Alpha</label>
+            <input type="text" class="form-control" [(ngModel)]="alpha" [formControl]="alphaAttr" name="alpha" required>
+            <mat-error *ngIf="alphaAttr.invalid">{{getErrorMessageRgba()}}</mat-error>
+          </div>
+
+          <button type="submit" class="btn btn-success" (click)="backgroundColorRgba(red, green, blue, alpha)">Ok</button>
+
+        </form>
+      </div>
+    </h2>
+
+
+  <div class = "grid-container">
+    <div>
+      <button mat-stroked-button (click)="closeWindow()">Annuler</button>
+    </div>
+    <div >
+        <button  mat-raised-button color="primary" (click)="saveValues(data.length, data.height)"[disabled]="minMaxL.invalid || minMaxH.invalid" >Ok</button>
+    </div>
+  </div>
+</div>  
+

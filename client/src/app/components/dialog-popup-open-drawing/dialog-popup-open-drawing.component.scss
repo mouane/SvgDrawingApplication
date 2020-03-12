@@ -1,0 +1,87 @@
+.open {
+    min-width: 400px;
+    max-width: 500px;
+    height: 500px;
+    width: 500px;
+    border-radius: 6px;
+}
+
+.mat-dialog-container {
+  overflow: auto;
+}
+
+.loadingImg {
+  text-align: center;
+}
+
+p {
+  font-size: 12px;
+}
+
+.grid-container {
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    text-align: center;
+    max-height:275px;
+    overflow-y:scroll;
+}
+
+.openClose-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.tags, .tagNames, .name {
+  margin: 0px;
+}
+
+.name {
+  height: 20px;
+}
+
+.drawingChosen {
+  background-color: #cfc9c8;
+  width: 115px;
+  height: 140px;
+}
+
+.tags {
+  height: 15px;
+}
+.tagNames {
+  height: 30px;
+}
+.drawing {
+  width: 115px;
+  height: 140px;
+}
+
+.imageBorder {
+  border: 1px solid gray;
+  height: 49px;
+  width: 49px;
+}
+
+br {
+  display: block;
+  margin: 0px;
+}
+
+h3 {
+  height: 20px;
+}
+
+.openDrawing {
+  background-color: #3f51b5;
+  border-collapse: collapse;
+  margin: 5px;
+}
+
+.close {
+  background-color: #b5b3ac;
+  margin: 5px;
+}

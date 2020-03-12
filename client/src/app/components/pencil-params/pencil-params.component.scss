@@ -1,0 +1,173 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 70px auto;
+    background-color: #F3F3F3;
+    padding: 0px;
+    height: 100%;
+  }
+  
+  .cursor{ 
+    height: 27px; 
+    width: 27px; 
+    fill: white; 
+    margin-left: 5px; 
+  } 
+  .toolboxIcon {
+    padding: 5px;
+    
+  }
+  .vertIcon{
+    padding: 5px;
+    display: contents;
+  }
+  
+  button {
+    display: block;
+    margin-top: 5px;
+    width: 120px;
+    text-align: justify;
+  }
+  
+  .changeSides{
+    width: 40px;
+    text-align: center;
+  }
+  
+  .numberOfSides{
+    margin-bottom: 0px;
+  }
+  
+  .mat-toolbar-row {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+  }
+  
+  .mat-form-field {
+    margin-left: 10px;
+    width: 150px;
+  }
+  
+  .mat-toolbar-row:hover {
+    background-color: grey;
+  }
+  
+  .option{
+    background-color : gray;
+  }
+  
+  mat-icon{
+    vertical-align: middle;
+  }
+  .smallButton{
+    display:block;
+    width: 3%;
+    text-align: start;
+    min-width: 1%;
+  }
+  
+  #create {
+    font-size: 24px;
+  }
+  
+  .zoneTools{
+    background-color: #F3F3F3;
+    height: 100vh;
+    overflow: auto;
+  }
+  .zoneSelect{
+    background-color: #1d33ad;
+  }
+  .padding-left{
+    padding-left: 15px;
+  }
+  
+  .geometry {
+    height: 36px;
+    width: 36px;
+    fill: white;
+  }
+  
+  .color{
+    -webkit-background-clip: text;
+    background-clip: box;
+    font-weight: bolder;
+    margin: 20px;
+  }
+  .confirm{
+    background-color: #ff4081;
+    color: white;
+    margin: auto;
+    
+  }
+  
+  mat-slider{
+    margin-left: 10px;
+  }
+  
+  p{
+    color: #1d33ad;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  
+  input{
+    width:30px;
+    padding-left: 10px;
+    margin-top:10px;
+  }
+  
+  .swap{
+    width: 40px;
+    margin-top: 10px;
+    background-color: white;
+    margin-left: 112px;
+    border-radius: 5px;
+  }
+  
+  .swap:hover{
+    background-color: #3f51b5;
+  }
+  
+  .stampDiv {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding:15px;
+    padding-left: 25px;
+  }
+  .insideGrid{
+    display: grid;
+    grid-auto-columns: auto auto;
+  }
+  .f {
+    display: inline-block;
+    width: 1em;
+  }
+  .n {
+    text-align: center;
+    border-bottom: 1px solid black; 
+  }
+  
+  .d {
+    text-align: center;
+  }
+  
+  .pipetteColor{
+    border: 1px solid black;
+    margin-left: 50%;
+    background: #FFFFFF;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .pipette {
+    margin-top: 20px;
+  }
+  
+  .selection {
+    font-size: 14px;
+  }
+  #lineIcon{
+    font-size: 30px;
+    text-align: left;
+  }

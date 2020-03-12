@@ -1,0 +1,27 @@
+<p>Taille police :</p> 
+<p>{{sliderValue}} px</p>
+<mat-slider min="25" max="150" [(value)]="sliderValue" (input)=onSliderchange($event)>
+</mat-slider>
+<div class ="container">
+    <mat-form-field class = "inner">
+        <mat-label>Police : </mat-label>
+        <mat-select>
+            <mat-option *ngFor="let police of policeList" [value]="police.value" (onSelectionChange)="change($event)">
+                {{police.value}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+      <mat-button-toggle mat-raised-button  color="primary" class = "inner" id = "bold" (click)="textGras()" value="bold">Gras</mat-button-toggle>
+      <mat-button-toggle mat-raised-button  color="primary" class = "inner" id = "italic" (click)="textItalique()" value="italic">Italique</mat-button-toggle>
+      
+    <mat-button-toggle-group vertical>  
+      <mat-button-toggle checked="true" mat-raised-button color="primary" class = "inner" id= "left" (click)="textAlignLeft()">
+         <mat-icon aria-hidden="true" aria-label="alignleft">format_align_left</mat-icon></mat-button-toggle>
+      <mat-button-toggle mat-raised-button color="primary" class = "inner" id= "right" (click)="textAlignRight()">
+         <mat-icon aria-hidden="true" aria-label="alignright">format_align_right</mat-icon></mat-button-toggle>
+      <mat-button-toggle mat-raised-button color="primary" class = "inner" id= "right" (click)="textAlignMiddle()">
+         <mat-icon aria-hidden="true" aria-label="aligncenter">format_align_center</mat-icon></mat-button-toggle>
+    </mat-button-toggle-group>
+
+
+</div>

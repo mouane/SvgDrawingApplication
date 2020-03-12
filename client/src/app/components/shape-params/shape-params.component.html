@@ -1,0 +1,41 @@
+<div>
+    <mat-form-field>
+        <mat-label>Choisir une forme</mat-label>
+        <mat-select [(value)]= "shapeProperties.selected">
+            <mat-option  value="rectangle" (onSelectionChange)="change($event)">Rectangle</mat-option>
+            <mat-option  value="ellipse" (onSelectionChange)="change($event)">Ellipse</mat-option>
+            <mat-option  value="polygon" (onSelectionChange)="change($event)">Polygone</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <table *ngIf="shapeProperties.shapeChosen === 'polygon'">
+        <tr>
+            <p class="numberOfSides">Nombre de cote:</p>
+        </tr>
+        <tr>
+            <th>
+                <p>{{shapeProperties.nbrOfSidesPolygon}}</p>
+            </th>
+            <th>
+                <button class="changeSides" mat-raised-button (click)="polygonSide('plus')">+</button>
+                <button class="changeSides" mat-raised-button (click)="polygonSide('less')">-</button>
+            </th>
+        </tr>
+    </table>
+</div>
+<div class="padding-left">
+    <mat-slider min="2" max="40" [(value)]="sliderValue" (input)=onSliderchange($event)>
+    </mat-slider>
+
+    <mat-button-toggle-group vertical value="Both">
+        <mat-button-toggle mat-raised-button color="primary" [class.option]="strokeType" (click)="traceType('stroke')" value="Contour">
+            Contour
+        </mat-button-toggle>
+        <mat-button-toggle mat-raised-button color="primary" [class.option]="fillType" (click)="traceType('fill')" value="Plein">
+            Plein
+        </mat-button-toggle>
+        <mat-button-toggle mat-raised-button color="primary" [class.option]="fillStrokeType" (click)="traceType('fillStroke')"value="Both">
+            Contour
+            + Plein
+        </mat-button-toggle>
+    </mat-button-toggle-group>
+</div>

@@ -1,0 +1,18 @@
+<p>Diametre du jet (px):</p>
+<mat-slider thumbLabel min="20" max="90" [(value)]="sliderValueSize" (input)=onSliderchangeSize($event)>
+</mat-slider>
+<svg height="95" width="95">
+  <circle cx="48" cy="48" [attr.r]="sliderValueSize" [attr.fill]="fill" />
+</svg>
+
+<p>Nombre d'emission par seconde :</p>
+<table>
+  <th>
+  <mat-slider thumbLabel min="50" max="400" [(value)]="sliderValueSparks" (input)=onSliderchangeSparks($event)>
+  </mat-slider>
+  </th>
+  <th>
+  <p> {{sliderValueSparks}} </p>
+  </th>
+  
+</table>
